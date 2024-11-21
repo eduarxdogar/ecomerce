@@ -1,14 +1,19 @@
-<div class="px-10">
+<div class="container mx-auto">
+  <div class="px-10">
     <h1 class="text-lg font-bold">Abaout</h1>
-    <p class="texts-xs">Lorem ipsum <span highlinght>dolor sit amet consectetur adipisicing elit. Quam possimus animi
-            iste
-            laboriosams </span>
-        fuga, nobis aliquam
-        laborum esse consectetur eum obcaecati eaque architecto, sapiente corporis illo aut cupiditate quibusdam
-        voluptates!</p>
-    <p class="texts-xs">Numero de clientes <app-counter [duration]="duration()" [message]="message()"
-            *ngIf="duration() > 0" /></p>
-    <div>
-        <app-wave-audio audioUrl="assets/audio.mp3"></app-wave-audio>
-    </div>
+    <p class="texts-xs">Lorem ipsum <span highlinght>dolor sit amet consectetur adipisicing elit. Quam possimus
+      animi
+      iste
+    laboriosams </span>
+    fuga, nobis aliquam
+    laborum esse consectetur eum obcaecati eaque architecto, sapiente corporis illo aut cupiditate quibusdam
+  voluptates!</p>
+  <p class="texts-xs">Numero de clientes @if (duration() > 0) {
+    <app-counter [duration]="duration()" [message]="message()"
+      />
+  }</p>
+  <div>
+    <app-wave-audio audioUrl="assets/audio.mp3"></app-wave-audio>
+  </div>
+</div>
 </div>
